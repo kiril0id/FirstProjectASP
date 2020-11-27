@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FirstProjectASP.Models.WokerAccesLayer>
+@{ ViewBag.Title = "Wokers";
+}
+
+<table class="table table-bordered table-responsive">
+
+    <thead>
+        <tr>
+
+            <th>ID</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>Patronymic</th>
+            <th>Startwork</th>
+            <th>Position</th>
+            <th>Company</th>
+        </tr>
+
+
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.LastName</td>
+            <td>@item.FirstName</td>
+            <td>@item.Patronymic</td>
+            <td>@item.Startwork</td>
+            <td>@item.Position</td>
+            <td>@item.Company</td>
+
+        </tr>
+    }
+
+</table>

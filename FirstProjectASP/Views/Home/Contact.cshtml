@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FirstProjectASP.Models.CompanyAccesLayer>
+@{ ViewBag.Title = "Company";
+}
+
+<table class="table table-bordered table-responsive">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NameCompany</th>
+            <th>LegalForm</th>            
+        </tr>
+
+
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.NameCompany</td>
+            <td>@item.LegalForm</td>          
+
+        </tr>
+    }
+
+</table>
