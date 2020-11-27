@@ -33,6 +33,7 @@ namespace FirstProjectASP.Models
 
                     company.Add(companyAcces);
                 }
+                connection.Close();
             }
             catch (Exception)
             {

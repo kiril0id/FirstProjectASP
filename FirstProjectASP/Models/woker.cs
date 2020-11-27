@@ -19,7 +19,7 @@ namespace FirstProjectASP.Models
             try
             {
                 SqlConnection connection = new SqlConnection(connectionString);
-               // string sqlExpression = "SELECT * FROM woker";
+             
                 SqlCommand sqlCommand = new SqlCommand("woker_getdate", connection);
                 connection.Open();
                 sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -36,7 +36,8 @@ namespace FirstProjectASP.Models
                     wokerAcces.Company = dataReader.GetValue(6).ToString();
                     wokers.Add(wokerAcces);
                 }
-                
+                connection.Close();
+
             }
             catch (Exception)
             {
@@ -44,9 +45,6 @@ namespace FirstProjectASP.Models
                 throw;
             }
             return wokers;
-
-
-
         }
 
     }
